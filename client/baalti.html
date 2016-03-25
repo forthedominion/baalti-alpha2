@@ -1,0 +1,243 @@
+<head>
+ 
+
+ <script src="//algorithmia.com/v1/clients/js/algorithmia-0.2.0.js" type="text/javascript"></script>
+
+<!-- GOOGLE FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:300,400,600,700%7COpen+Sans:300,400,600,700%7CHandlee" rel="stylesheet">
+
+<!-- FONT ICONS -->
+    <link rel="stylesheet" href="/icons/icons.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <title>Welcome To BaaltiList</title>
+</head>
+
+<body>
+ 
+</body>
+
+
+<!-- template name="home" onload="ChangeText()">
+<p>Welcome to BaaltiList</p> 
+</template-->
+
+<!-- template name="register">
+<h2>Register</h2> 
+<form class="register">
+	<p>Email: <input type="email" name="email" required></p>
+	<p>Password: <input type="password" name="password" required></p>
+	<p><input type="submit" value="Register"></p>
+</form>
+</template-->
+
+<template name="register">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+            
+            <div class="account-wall">
+                <h2 class="text-center login-title"><strong>Sign-up to get started with BaaltiList</strong></h2>
+                <form class="form-signin register">
+                <input type="email" class="form-control" placeholder="Email" name="email" required autofocus>
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Get Started</button>
+                
+              
+                </form>
+                <p class="text-center text-white"> <a class="text-center text-white" href="{{pathFor route='login'}}"> Already have a BaaltiList account? Sign in </a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</template>
+
+
+
+<template name="login">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+            
+            <div class="account-wall">
+              <h2 class="text-center login-title"><strong>Sign in to continue to BaaltiList</strong></h2>  
+                <form class="form-signin login">
+                <input type="email" class="form-control" placeholder="Email" name="email" required autofocus>
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+                
+                
+                </form>
+              <p class="text-center text-white"> <a class="text-center text-white" href="{{pathFor route='register'}}" >Don't have a BaaltiList account? Sign-up</a></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</template>
+
+
+
+
+<template name="userList">
+ <section>
+            <div class="container">
+                <div class="wrapper-lg">
+
+ <div class="jumbotron quote-tron vmiddle">
+  <blockquote class="blockquote-reverse">
+  <p>To succeed in your mission, you must have single-minded devotion to your goal.</p>
+ <footer>Some Dude</footer>
+</blockquote>
+</div>
+
+{{> activityList}}
+
+
+</div>
+          </div>      
+    </section>
+
+
+</template>
+
+<template name="newActivity">
+ <form class ="newActivity">
+ 	<p>Create a New Goal: </p>
+		<p><input type="text" placeholder="What's Your Dream?" name="activity" required></p>
+		<p><input type="date" placeholder="Goal Date..." name="goalDate" required></p>
+		<p><input type="submit" value="Add"></p>
+	</form>
+</template>
+
+<template name="activityList">
+ 
+<ul>
+<div class="col-lg-3 col-md-4 col-sm-6 vmiddle">
+     <div class="well well-activity well-lg buttonHolder">
+        <div class="well-act-content">
+        <a href="#" id="add" role="button">
+          <span class="glyphicon glyphicon-plus jumbo" aria-hidden="true"></span>
+        </a>
+    <p><small>Add Another Goal to Your List </small></p>
+  </div>
+    </div>
+</div>
+
+ {{#each activityList}}
+ 	{{> activityItem}}
+ {{/each}}
+ </ul>
+</template>
+
+<template name="activityItem">
+ <div class="col-lg-3 col-md-4 col-sm-6 vmiddle">
+
+
+   <div class="itembackground centered {{completed}}" style="background: url(https://{{bgImg}}) no-repeat; background-size: cover;">
+
+        <div class="{{stlyeComplete}}">
+          <h4 class="activity-header {{stlyeComplete}}"> {{activity}} </h4>
+        <p class=""> by </p>
+        <h5 class="activity-date {{stlyeComplete}}"> {{goalDate}} </h5>
+
+        <div class="buttonHolder">
+            
+            <div class="btn-group btn-group-sm" role="group">
+              {{#if completed}}
+              <button type="button" class="btn btn-color {{stlyeComplete}}" name="completeStatus">
+                  <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+              </button>
+              {{else}}
+              <button type="button" class="btn btn-color {{stlyeComplete}}" name="completeStatus">
+                  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+              </button>
+              {{/if}}
+
+              <button type="button" name="edit" class="btn btn-color {{stlyeComplete}}">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" class="btn btn-color delete-activity {{stlyeComplete}}">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              </button>
+
+             </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+</template>
+
+
+<!--template name="oldactivityItem">
+  <div class="col-lg-3 col-md-4 col-sm-6">
+     
+     <div class="well {{completed}} {{stlyeComplete}} well-sm centered">
+        <h4 class="activity-header"> {{activity}} </h4>
+        <p class=""> by </p>
+        <h5 class="activity-date"> {{goalDate}} </h5>
+       
+        <div class="buttonHolder">
+            <div class="btn-group btn-group-sm buttonHolder" role="group">
+              {{#if completed}}
+              <button type="button" class="btn btn-color" name="completeStatus">
+                  <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+              </button>
+              {{else}}
+              <button type="button" class="btn btn-color" name="completeStatus">
+                  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+              </button>
+              {{/if}}
+
+              <button type="button" name="edit" class="btn btn-color">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+              </button>
+
+              <button type="button" class="btn btn-color delete-activity">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              </button>
+
+             </div>
+        </div>
+     
+     </div> 
+  
+  </div>
+
+</template-->
+
+
+
+<template name="inspiration2">
+ <div class="list-group"> 
+ <h2>Some ideas to get you started</h2>
+ {{#each inspiration}}
+<a href="#" class="list-group-item">{{name}} </a>
+ {{/each}}
+</div>
+</template>
+
+
+
+
+
+
+
+<template name="loading">
+ <div class="preloader" style="display: none;">
+            <div class="loader-container">
+                <div class="text-logo">Baalti List</div>
+                <div class="signal" style="display: none;"></div>
+            </div>
+        </div>
+</template>
+
+
+

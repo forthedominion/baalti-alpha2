@@ -1,0 +1,26 @@
+<template name='goalSpecific'> 
+
+<div class="container">
+    <div class="wrapper-lg">
+       
+       <h1>Goal: {{currentGoalName}}</h1>
+
+        <div class="row-iso">
+          
+          
+         
+
+          
+
+          {{#each goalSpecificContent}}
+          {{> contentItem}}
+          {{/each}}
+        
+              
+        </div>
+    </div>
+
+</div>
+
+</template>
+

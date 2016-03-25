@@ -1,0 +1,91 @@
+
+
+<template name="inspiration">
+
+    <section>
+      <div class="container">
+          <div class="wrapper-lg">
+
+             <div class="jumbotron quote-tron vmiddle">
+                <blockquote class="blockquote-reverse">
+                <p>A goal without a plan is just a wish</p>
+               <footer>Another Dude</footer>
+              </blockquote>
+            </div>
+              
+              <ul>
+               {{#each inspiration}}
+      
+<div class="col-lg-3 col-md-4 col-sm-6 vmiddle">
+  
+   <div class="inspiration-bg centered" style="background: url(https://{{bgImg}}) no-repeat; background-size: cover;">
+    
+        <div class="inspiration-box">
+          <h4 class="activity-header inspiration-box"> {{name}} </h4>
+      
+
+        <div class="buttonHolder">
+            
+              <button type="button" name="add" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+
+              
+
+          </div>
+      </div>
+  </div>
+</div>
+
+      
+     
+     {{/each}}
+     
+
+              </ul>
+
+          </div>
+      </div>      
+
+    </section>
+
+</template>
+
+
+
+<template name="inspirationItems">
+    
+    
+
+      
+
+     {{#each inspiration}}
+      
+<div class="col-lg-3 col-md-4 col-sm-6 vmiddle">
+  
+   <div class="itembackground centered {{completed}}" style="background: url(https://placeimg.com/640/480/any) no-repeat; background-size: cover;">
+    
+        <div class="{{stlyeComplete}}">
+          <h4 class="activity-header {{stlyeComplete}}"> {{name}} </h4>
+      
+
+        <div class="buttonHolder">
+            
+              <button type="button" name="edit" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+
+              
+
+          </div>
+      </div>
+  </div>
+</div>
+
+      
+     
+     {{/each}}
+     
+
+
+</template>

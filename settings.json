@@ -1,0 +1,7 @@
+{
+"galaxy.meteor.com": {
+	"env": {
+		"MONGO_URL": "mongodb://alpha:Ivey2011@ds019839.mlab.com:19839/baalti-alpha"
+		}
+	}
+}

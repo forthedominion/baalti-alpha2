@@ -1,0 +1,24 @@
+<template name='userIndex'> 
+
+<div class="container">
+                <div class="wrapper-lg">
+                    <div class="row-iso">
+                        
+                         <!-- MOVE THIS 'NEXT 5' PANEL TO ITS OWN TEMPLATE -->
+                     
+
+                  {{> userNext52}}
+
+                  {{#each userContent}}
+                  {{> contentItem}}
+                  {{/each}}
+                    
+	         
+                        
+                    </div>
+                </div>
+           
+            </div>
+
+</template>
+

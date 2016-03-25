@@ -1,0 +1,56 @@
+<template name="main">
+<div class="main-wrapper">
+
+
+<!-- =========================
+           HEADER
+      ============================== -->
+        <header class="">
+            <!-- Background Overlay -->
+            <div class="overlay">
+{{> navigation}}
+ 
+ </div>
+            <!-- /End Background Overlay -->
+        </header>
+        <!-- =========================
+           /END HEADER
+      ============================== -->
+<div id="body">
+ <section class="content-wrapper main-content clear-fix">     
+{{> yield}} 
+</section>
+</div>
+
+<hr />
+ <!-- ==================================================
+          FOOTER
+      ======================================================= -->
+        <footer class="footer dark-bg" id="footer">
+            <div class="container-xs">
+                <div class="wrapper-xs">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="footer-nav">
+                                <li>
+                                     <a href="#">About</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                            <p class="footer-copy">Copyright &copy; For the Dominion, 2015</p>
+                        </div>
+
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- /End Wrapper -->
+            </div>
+            <!-- /End Container -->
+        </footer>
+</div>
+
+</template>

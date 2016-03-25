@@ -1,0 +1,66 @@
+<template name="navigation"> 
+
+
+
+                <!-- =========================================
+                   Navigation
+              ========================================== -->
+                <nav class="navbar navbar-fixed-top dark-bg" role="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Navbar-Header -->
+                                <div class="navbar-header">
+
+                                    <!-- Mobile Menu -->
+                                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                    </button>
+
+                                    <!-- Text-Logo -->
+                                    {{#if currentUser}}
+                                    <a href="{{pathFor route='userIndex'}}" class="navbar-brand scrollto" title="BaaltiList">
+                                        <span class="text-logo">BaaltiList</span>
+                                    </a>
+                                    {{else}}
+                                    <a href="{{pathFor route='home'}}" class="navbar-brand scrollto" title="BaaltiList">
+                                        <span class="text-logo">BaaltiList</span>
+                                    </a>
+                                    {{/if}}
+                                </div>
+                                <!-- /End Navbar-Header -->
+
+                                <!-- Navbar-Collapse -->
+                                <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <!-- Menu Items -->
+                                        <!--li><a href="{{pathFor route='about'}}">About</a></li>
+                                            <li><a href="{{pathFor route='privacy'}}">Privacy</a></li-->
+                                            {{#if currentUser}}
+                                            <li><a href="{{pathFor route='userList'}}">My List</a></li>
+                                            <li><a href="{{pathFor route='inspiration'}}">Get Inspired</a></li>
+                                            <li><a href="#" class="logout btn btn-nav">Logout</a></li>
+                                            {{else}}
+                                            <li><a href="{{pathFor route='about'}}">About</a></li>
+                                            <li><a href="{{pathFor route='privacy'}}">Privacy</a></li>
+                                            <li><a class="btn btn-nav btn-color" href="{{pathFor route='register'}}">Get Started</a></li>
+                                            <li><a class="btn btn-nav" href="{{pathFor route='login'}}">Login</a></li>
+                                            {{/if}}
+                                    </ul>
+                                </div>
+                                <!-- /End Navbar-Collapse -->
+                            </div>
+                            <!-- /End Col -->
+                        </div>
+                        <!-- /End Row -->
+                    </div>
+                    <!-- /End Container -->
+                </nav>
+                <!-- /End Sticky Navigation -->
+
+
+                
+                                
+           
+</template>
+

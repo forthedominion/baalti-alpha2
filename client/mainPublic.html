@@ -1,0 +1,281 @@
+<template name="mainPublic"> 
+
+<body>
+
+    <div class="main-wrapper">
+
+        
+
+        <!-- =========================
+           HEADER
+      ============================== -->
+         <header class="header" id="top" data-stellar-background-ratio="0.5">
+            <!-- Background Overlay -->
+            <div class="overlay">
+
+                <!-- =========================================
+                   Navigation
+              ========================================== -->
+                <!--nav class="navbar navbar-fixed-top dark-bg" role="navigation"-->
+                <nav class="navbar dark-bg navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Navbar-Header -->
+                                <div class="navbar-header">
+
+                                    <!-- Mobile Menu -->
+                                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                    </button>
+
+                                    <!-- Text-Logo -->
+                                    <a href="{{pathFor route='home'}}" class="navbar-brand scrollto" title="BaaltiList">
+                                        <span class="text-logo">BaaltiList</span>
+                                    </a>
+
+                                    
+
+                                </div>
+                                <!-- /End Navbar-Header -->
+
+                                <!-- Navbar-Collapse -->
+                                <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <!-- Menu Items -->
+                                         
+                                      
+                                        
+                                            {{#if currentUser}}
+                                            <li><a href="{{pathFor route='userList'}}">My List</a></li>
+                                            <li><a href="{{pathFor route='inspiration'}}">Get Inspired</a></li>
+                                            <li><a href="#" class="logout btn btn-nav">Logout</a></li>
+                                            {{else}}
+                                            
+                                            <li><a class="btn btn-nav btn-color" href="{{pathFor route='register'}}">Get Started</a></li>
+                                            <li><a href="{{pathFor route='about'}}">About</a></li>
+                                            <li><a href="{{pathFor route='privacy'}}">Privacy</a></li>
+                                            <li><a class="btn btn-nav" href="{{pathFor route='login'}}">Login</a></li>
+                                            {{/if}}
+                                    </ul>
+                                </div>
+                                <!-- /End Navbar-Collapse -->
+                            </div>
+                            <!-- /End Col -->
+                        </div>
+                        <!-- /End Row -->
+                    </div>
+                    <!-- /End Container -->
+                </nav>
+                <!-- /End Sticky Navigation -->
+
+                
+               
+                <!-- =========================================
+                   Hero-Section
+              ========================================== -->
+                <div class="container vmiddle">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="hero-section">
+<br/><br/><br/>
+                                <!-- Welcome - Hero Message -->
+                                
+                                <h1 class="text-white spinner-h1">I Want To: <span id="spnChanger1"></span></h1>
+                                <br/>
+                             
+                                <h1 class="text-white spinner-h1">Before: <span id="spnChanger2"></span></h1>
+                                <br />
+                              
+                             
+
+                                <!-- Learn More & Video Buttons -->
+                                <div class="btn-box">
+                                    <a href="{{pathFor route='about'}}" class="btn btn-ghost text-white">Learn More</a>
+                                    
+                                    <a class="btn btn-color" href="{{pathFor route='register'}}">Get Started</a>
+
+
+                                </div>
+
+
+                            </div>
+                            <!-- /End Intro-Section -->
+
+                        </div>
+                        <!-- /End Col -->
+                        <div class="col-md-8 ">
+                            <br/><br/><h3 class="text-white">Our goal is to make it easier for you to achieve yours</h3>
+                            <p class="text-white">From small goals to big dreams, we're focused on providing  you with the tools, information and motivation to get there.</p>
+                        </div>
+                    </div>
+                    <!-- /End Row -->
+
+
+                </div>
+                <!-- /End Container Hero-Section -->
+                
+                                
+           
+                </div>
+            <!-- /End Background Overlay -->
+     </header>
+    <!--/header-->
+        <!-- =========================
+           /END HEADER
+      ============================== -->
+
+
+
+
+    <div id="body">
+       
+        <section class="content-wrapper main-content clear-fix">
+            
+
+
+
+
+
+<!-- =================================
+           SECTION ABOUT - INTRO FEATURES
+      ====================================== -->
+<section class="intro-features light-bg" id="about">
+    <div class="container">
+        <!-- Padding -->
+        <div class="wrapper-md">
+
+            <!-- Three Main Features with Icons -->
+            <div class="row">
+                <div class="col-sm-4 intro-content">
+                    <div class="icon-lg">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h4 class="feature">Dream.</h4>
+                    <p>We all have dreams. Some are big, some small and some are just wacky. But what we all share is our desire to achieve and realize our dreams. </p>
+                    <br />
+                         
+                    <p>No matter what your dreams are, tell us about them and let us help you live your dreams.</p>
+                </div>
+                <div class="col-sm-4 intro-content">
+                    <div class="icon-lg">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h4 class="feature">Baalti.</h4>
+                    <p>Baalti List provides you with the stuff you need to make achieving your dreams easy and enjoyable - no matter the size of your goal. </p>
+                    <br />
+                         
+                    <p>Whether you want to climb a mountain, play guitar or learn to make great sushi we can help. </p>
+                </div>
+                <div class="col-sm-4 intro-content">
+                    <div class="icon-lg">
+                        <i class="fa fa-map-signs"></i>
+                    </div>
+                    <h4 class="feature">Go!</h4>
+                    <p>We'll help you stay on track with useful content, resources, reminders and encouragement to help you turn your dreams into great stories. </p>
+                    <br/><p>Let the magic of BaaltiList help you achieve your dreams and turn them into great stories.</p>
+                </div>
+            </div>
+            <!-- /End Row -->
+        </div>
+        <!-- /End Wrapper -->
+    </div>
+    <!-- /End Container -->
+</section>
+<!-- =============================
+           /END INTRO FEATURES
+      ============================== -->
+
+
+
+
+
+        </section>
+    </div>
+
+
+        <!-- ==================================================
+          NEWSLETTER AND SOCIAL DIVIDER
+      ======================================================= -->
+        <section class="newsletter color-bg" id="newsletter">
+            <div class="container">
+                <div class="wrapper-xs">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-5">
+
+                            <!-- =========================
+                              Social Icons
+                          ============================== -->
+
+                           
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://www.facebook.com/pages/Baalti-List/129571247198312">
+                                        <i class="fa small fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/baaltilist">
+                                        <i class="fa small fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            
+                    </div>
+                    <!-- /End Col -->
+                </div>
+                <!-- /End Row -->
+            </div>
+            <!-- End Wrapper -->
+    </div>
+    <!-- /End Container -->
+    </section>
+     
+    <!-- =============================
+           /END NEWSLETTER SECTION 
+      ============================== -->
+
+        <!-- ==================================================
+          FOOTER
+      ======================================================= -->
+        <footer class="footer dark-bg" id="footer">
+            <div class="container-xs">
+                <div class="wrapper-xs">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="footer-nav">
+                                <li>
+                                     <a href="/Home/About">About</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/Home/Privacy">Privacy Policy</a>
+                                </li>
+                            </ul>
+                            <p class="footer-copy">&copy; 2015 - BaaltiList.</p>
+                        </div>
+
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- /End Wrapper -->
+            </div>
+            <!-- /End Container -->
+        </footer>
+
+    </div>
+    <!-- /End Main Wrapper -->
+
+
+
+
+  
+
+</body>
+
+
+
+
+</template>

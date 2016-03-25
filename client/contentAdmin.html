@@ -1,0 +1,53 @@
+<template name="contentAdmin">
+	<section>
+		<div class="container">
+    		<div class="wrapper-lg">
+
+<h1>RSS Content Admin</h1>
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+     
+     <ul>
+  
+    {{#each contentList}}
+
+        {{> adminContentItem}}
+
+    {{/each}}
+
+    </ul>    
+</div>
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</section>
+</template> 
+
+
+
+<template name="adminContentItem">
+
+<li>
+	<br />
+<p><strong>Source: {{source}}</strong></p><br />
+<p><strong>Title: </strong>{{title}}</p><br />
+<p><strong> Description: </strong> {{description}}</p>
+<div class="btn-group btn-group buttonHolder" role="group">
+
+        <button type="button" class="btn btn-color delete-content">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+
+</div>
+
+</li>
+
+</template>
+

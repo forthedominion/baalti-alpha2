@@ -1,0 +1,110 @@
+<template name="userNext5">
+ <div class="col-lg-3 col-md-4 col-sm-6"> 
+  <div class="panel panel-default"> 
+      <div class="panel-heading-baalti">
+          <h5 class="panel-title">My Baalti Next 5</h5>
+      </div>
+
+      <div class="panel-body">
+        <table class="activity-table">
+        
+          {{#each  userNext5}}
+            {{> nextFiveItem}}
+          {{/each}}
+
+        </table>
+     
+     
+        <div class="buttonHolder">
+          <button class="btn btn-sm btn-color" id="add">Add</button>
+          <button class="btn btn-color" id="manage">Manage</button>
+        </div>
+      </div>                                                      
+  </div>
+</div>
+
+</template>
+  
+  
+
+<template name="nextFiveItem">
+
+<tr class="activity-table">
+      <td class="activity-table upper">{{activity}}</td>
+  </tr>
+
+</template>
+
+
+<template name="userNext52"> 
+<div class="col-lg-3 col-md-4 col-sm-6">
+        <ul class="event-list">
+          
+           {{#each  userNext5}}
+            <li>
+            
+            <time datetime="{{goalDate}}">
+              <span class="day">{{currentGoalDay}}</span>
+              <span class="month">{{currentGoalMonth}}</span>
+              <span class="year">{{currentGoalYear}}</span>
+              
+            </time>   
+
+            <div class="info">
+              <h2 class="title"><a href="/goal/{{activityId}}" class="goal">{{activity}}</a></h2>
+            
+            </div>
+            
+          </li>
+          {{/each}}
+  
+        </ul>
+
+<div class="buttonHolder">
+  <div class="btn-group btn-group" role="group">
+          <button class="btn btn-primary" id="add">Add</button>
+          <button class="btn btn-primary" id="manage">Manage</button>
+
+  </div>
+          
+        </div>
+
+      </div>
+</template>
+
+
+<!--template name="nextFiveItem2"> 
+
+          <li>
+            
+            <time datetime="{{goalDate}}">
+              <span class="day">4</span>
+              <span class="month">Jun</span>
+              <span class="year">{{currentGoalDate}}</span>
+              
+            </time>   
+
+            <div class="info">
+              <h2 class="title">{{activity}}</h2>
+            
+            </div>
+            
+          </li>
+  
+        
+</template-->
+
+
+<!--template name="goalDate"> 
+
+          
+            <time datetime="{{goalDate}}">
+              <span class="day">4</span>
+              <span class="month">Jun</span>
+              <span class="year">{{currentGoalDate}}</span>
+              
+            </time>            
+            
+</template-->
+
+

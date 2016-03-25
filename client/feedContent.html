@@ -1,0 +1,33 @@
+<template name="testingTemplate">
+
+	<div class="col-lg-3 col-md-4 col-sm-6">
+           	<div class="well well-iso well-sm">
+            	<img src="/Ecxite.jpg" class="img-responsive" alt="" />
+            	
+            	<h5>{{title}} </h5>
+            	<p> <small>{{description}}</small></p>
+            	<a href="{{url}}" class="rssExternal"><p><small>Continue reading on {{source}}</small></p></a>
+      		</div>
+  	</div>
+
+</template>
+
+
+<template name="contentItem">
+	<div class="col-lg-3 col-md-4 col-sm-6">
+	  
+	   <div class="content-bg centered" style="background: url(https://placeimg.com/640/480/any) no-repeat; background-size: cover;">
+	    
+	        <div class="content-box">
+	        	<a href="{{url}}" class="rssExternal">
+		        	<h4 class="activity-header content-box"> {{title}} </h4>
+		      		<p class="blurb"> <small>{{description}}</small></p>
+		      		<p class="source"> <small>Source: {{source}}</small></p>
+		      	</a>
+	        	
+	      </div>
+	  </div>
+	</div>
+
+</template>
+
